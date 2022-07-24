@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 0.9375rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 75rem;
+}
+.header {
+  text-align: center;
+}
+
+.header .title {
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--grayish-blue);
+}
+
+.header .sub-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--very-dark-blue);
+  margin-bottom: 1rem;
+}
+
+.header .info {
+  color: var(--grayish-blue);
+  max-width: 33rem;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid .card {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.5em;
+  background-color: var(--white);
+  text-align: left;
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.5);
+}
+
+.box-1 {
+  border-top: 4px solid var(--cyan);
+  place-self: center;
+}
+
+.box-2 {
+  border-top: 4px solid var(--red);
+}
+
+.box-3 {
+  border-top: 4px solid var(--orange);
+}
+
+.box-4 {
+  border-top: 4px solid var(--blue);
+  place-self: center;
+}
+
+.grid .col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card .work {
+  color: var(--very-dark-blue);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card .work-info {
+  color: var(--grayish-blue);
+  margin-bottom: 2.5rem;
+}
+
+.card .image {
+  text-align: right;
+}
+
+@media screen and (max-width: 48rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 26.56rem) {
+  .header .title,
+  .header .sub-title {
+    font-size: 1.5rem;
+  }
+
+  .header .sub-title {
+    margin-bottom: 0.85rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card .work-info {
+    margin-bottom: 1.5rem;
+  }
+}
